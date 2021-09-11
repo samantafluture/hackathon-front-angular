@@ -12,14 +12,20 @@ import { EditHackathonComponent } from './components/pages/hackathons/edit-hacka
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, ListHackathonComponent, AddHackathonComponent, EditHackathonComponent, NotFoundComponent],
+  declarations: [
+    AppComponent,
+    ListHackathonComponent,
+    AddHackathonComponent,
+    EditHackathonComponent,
+    NotFoundComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
