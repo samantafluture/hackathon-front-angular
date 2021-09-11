@@ -1,20 +1,33 @@
 <h1>Add a Hackathon</h1>
-<form>
+<form (ngSubmit)="add(hackathon)" #addHackathonForm="ngForm">
   <fieldset>
     <input
       [(ngModel)]="hackathon.name"
+      #name="ngModel"
       type="text"
       placeholder="Title"
       id="name"
       name="name"
+      required
+      minlength="3"
     />
+    <div [hidden]="name.valid || name.pristine">
+      Name is required and must be at least 3 caracters
+    </div>
     <input
       [(ngModel)]="hackathon.description"
+      #description="ngModel"
       type="text"
       placeholder="Description"
       id="description"
       name="description"
+      required
+      minlength="3"
+      maxlength="10"
     />
+    <div [hidden]="description.valid || description.pristine">
+      Description is required and must be at most 300 caracters
+    </div>
     <input
       [(ngModel)]="hackathon.price"
       type="number"
@@ -24,18 +37,29 @@
     />
     <input
       [(ngModel)]="hackathon.location"
+      #location="ngModel"
       type="text"
-      placeholder="Location"
+      placeholder="Location or Online"
       id="location"
       name="location"
+      required
+      minlength="2"
     />
+    <div [hidden]="location.valid || location.pristine">
+      Location is required and must be a place or remote/online
+    </div>
     <input
       [(ngModel)]="hackathon.date"
+      #date="ngModel"
       type="date"
       placeholder="Date"
       id="date"
       name="date"
+      required
     />
+    <div [hidden]="date.valid || date.pristine">
+      Date is required
+    </div>
     <input
       [(ngModel)]="hackathon.url"
       type="text"
@@ -43,7 +67,9 @@
       id="url"
       name="url"
     />
-    <button (click)="add(hackathon)" >Add Hackathon</button>
-    <button (click)="cancel()" >Cancel</button>
+    <button type="submit" [disabled]="!addHackathonForm.form.valid">
+      Add Hackathon
+    </button>
+    <button (click)="cancel()">Cancel</button>
   </fieldset>
 </form>
