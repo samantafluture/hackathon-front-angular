@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ListHackathonComponent } from './components/pages/hackathons/list-hackathon/list-hackathon.component';
 import { SharedModule } from './components/shared/shared.module';
 import { AddHackathonComponent } from './components/pages/hackathons/add-hackathon/add-hackathon.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditHackathonComponent } from './components/pages/hackathons/edit-hackathon/edit-hackathon.component';
 
 @NgModule({
@@ -18,6 +18,7 @@ import { EditHackathonComponent } from './components/pages/hackathons/edit-hacka
     SharedModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

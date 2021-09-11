@@ -2,10 +2,11 @@
   <h1>
     Hackathons <span class="qtd">({{ hackathons.length }})</span>
   </h1>
+  <form>
+    <input placeholder="Search for hackathons..." [formControl]="searchInput" />
+  </form>
   <div>
-    <a [routerLink]="['/add']">
-      Add Hackathon
-    </a>
+    <a [routerLink]="['/add']"> Add Hackathon </a>
   </div>
   <table>
     <thead>
@@ -18,7 +19,7 @@
         <th>URL</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngIf="hackathons$ | async as hackathons; else empty">
       <tr *ngFor="let hackathon of hackathons">
         <td>{{ hackathon.name }}</td>
         <td>{{ hackathon.description }}</td>
@@ -27,14 +28,15 @@
         <td>{{ hackathon.date | date: "MM/dd/yyyy" }}</td>
         <td>{{ hackathon.url }}</td>
         <td>
-          <a
-            [routerLink]="['/edit/' + hackathon._id]"
-          >
-            Edit
-          </a>
-          <button (click)="remove(hackathon._id)" >Remove</button>
+          <a [routerLink]="['/edit/' + hackathon._id]"> Edit </a>
+          <button (click)="remove(hackathon._id)">Remove</button>
         </td>
       </tr>
     </tbody>
+    <ng-template #empty>
+      <tbody>
+        No events...
+      </tbody>
+    </ng-template>
   </table>
 </div>

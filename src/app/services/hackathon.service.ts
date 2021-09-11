@@ -33,4 +33,6 @@ export class HackathonService {
   public removeHackathon(id: any) {
     return this.http.delete<Hackathon>(`${API}/event/delete/${id}`);
   }
+
+
 }
