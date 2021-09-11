@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Hackathon } from 'src/app/interfaces/hackathon';
 import { HackathonService } from 'src/app/services/hackathon.service';
 
@@ -13,8 +12,7 @@ export class ListHackathonComponent implements OnInit {
   hackathonId!: string;
 
   constructor(
-    private hackathonService: HackathonService,
-    private router: Router
+    private hackathonService: HackathonService
   ) {}
 
   ngOnInit(): void {
@@ -26,12 +24,11 @@ export class ListHackathonComponent implements OnInit {
   remove(id: any) {
     this.hackathonService.removeHackathon(id).subscribe(
       () => {
-        console.log('removido');
+        console.log('hackathon removed');
         this.ngOnInit();
       },
       (error) => console.log(error)
     );
   }
 
-  edit(id: any, hackathon: Hackathon) {}
 }

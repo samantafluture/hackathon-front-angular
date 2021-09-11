@@ -27,7 +27,11 @@
         <td>{{ hackathon.date | date: "MM/dd/yyyy" }}</td>
         <td>{{ hackathon.url }}</td>
         <td>
-          <button (click)="edit(hackathon._id, hackathon)" >Edit</button>
+          <a
+            [routerLink]="['/edit/' + hackathon._id]"
+          >
+            Edit
+          </a>
           <button (click)="remove(hackathon._id)" >Remove</button>
         </td>
       </tr>
