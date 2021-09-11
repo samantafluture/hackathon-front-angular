@@ -9,9 +9,10 @@ import { SharedModule } from './components/shared/shared.module';
 import { AddHackathonComponent } from './components/pages/hackathons/add-hackathon/add-hackathon.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditHackathonComponent } from './components/pages/hackathons/edit-hackathon/edit-hackathon.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, ListHackathonComponent, AddHackathonComponent, EditHackathonComponent],
+  declarations: [AppComponent, ListHackathonComponent, AddHackathonComponent, EditHackathonComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
