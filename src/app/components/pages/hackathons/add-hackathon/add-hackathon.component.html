@@ -1,0 +1,49 @@
+<h1>Add a Hackathon</h1>
+<form>
+  <fieldset>
+    <input
+      [(ngModel)]="hackathon.name"
+      type="text"
+      placeholder="Title"
+      id="name"
+      name="name"
+    />
+    <input
+      [(ngModel)]="hackathon.description"
+      type="text"
+      placeholder="Description"
+      id="description"
+      name="description"
+    />
+    <input
+      [(ngModel)]="hackathon.price"
+      type="number"
+      placeholder="Price"
+      id="price"
+      name="price"
+    />
+    <input
+      [(ngModel)]="hackathon.location"
+      type="text"
+      placeholder="Location"
+      id="location"
+      name="location"
+    />
+    <input
+      [(ngModel)]="hackathon.date"
+      type="date"
+      placeholder="Date"
+      id="date"
+      name="date"
+    />
+    <input
+      [(ngModel)]="hackathon.url"
+      type="text"
+      placeholder="URL"
+      id="url"
+      name="url"
+    />
+    <button (click)="add(hackathon)" >Add Hackathon</button>
+    <button (click)="cancel()" >Cancel</button>
+  </fieldset>
+</form>

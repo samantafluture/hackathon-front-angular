@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>
+    Hackathons <span class="qtd">({{ hackathons.length }})</span>
+  </h1>
+  <div>
+    <a [routerLink]="['/add']">
+      Add Hackathon
+    </a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hackathon of hackathons">
+        <td>{{ hackathon.name }}</td>
+        <td>{{ hackathon.description }}</td>
+        <td>{{ hackathon.price | currency }}</td>
+        <td>{{ hackathon.location }}</td>
+        <td>{{ hackathon.date | date: "MM/dd/yyyy" }}</td>
+        <td>{{ hackathon.url }}</td>
+        <td>
+          <button (click)="edit(hackathon._id, hackathon)" >Edit</button>
+          <button (click)="remove(hackathon._id)" >Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

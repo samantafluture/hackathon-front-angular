@@ -1,0 +1,10 @@
+POST http://hackathon-api-nest-mongo.herokuapp.com/event/create
+Content-Type: application/json
+
+{
+    "name": "Hackathon California Makers 2021",
+    "description": "Create your own robots and diy projects",
+    "price": 45,
+    "location": "Los Angeles, USA",
+    "date": "2021-11-03T03:00:00.000Z"
+}
