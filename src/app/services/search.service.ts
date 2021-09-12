@@ -12,6 +12,16 @@ const API = environment.apiUrl;
 export class SearchService {
   constructor(private http: HttpClient) {}
 
+  /* TODO
+  *
+  * [1] create new filter by location:
+  *     if user search params contains or match hackathon.location,
+  *     show filtered results by this location
+  * [2] create a search bar for this feature:
+  *     with address autocomplete,
+  *     permitting only address
+  * */
+
   public searchHackathonPrice(value?: string) {
     const params = value ? new HttpParams().append('name', value) : undefined;
     return this.http

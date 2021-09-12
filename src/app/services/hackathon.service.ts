@@ -12,6 +12,14 @@ const API = environment.apiUrl;
 export class HackathonService {
   constructor(private http: HttpClient) {}
 
+  /* TODO
+  *
+  * [1] get free hackathons method (sorted by dates)
+  * [2] get remote hackathons method (sorted by date)
+  * [3] extract 'sortedBy...' funcs to a helper folder
+  * [4] create toggle btns for the new methods
+  * */
+
   public getAllHackathons() {
     return this.http
       .get<Hackathons>(`${API}/event/all`)
