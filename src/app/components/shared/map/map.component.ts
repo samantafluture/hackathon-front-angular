@@ -25,8 +25,8 @@ export class MapComponent implements AfterViewInit {
   });
 
   ngAfterViewInit() {
-    this.mapInitializer();
     this.setCurrentLocation();
+    this.mapInitializer();
   }
 
   mapInitializer() {

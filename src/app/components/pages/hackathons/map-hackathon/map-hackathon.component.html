@@ -1,0 +1,40 @@
+<div>
+      <!--these properties are required: center, zoom-->
+      <app-google-maps
+        [center]="center"
+        [zoom]="zoom"
+        [disableDefaultUI]="disableDefaultUI"
+        [disableDoubleClickZoom]="disableDoubleClickZoom"
+        [mapTypeId]="mapTypeId"
+        [maxZoom]="maxZoom"
+        [minZoom]="minZoom"
+        [styles]="styles"
+      >
+        <!--this property is required: position-->
+        <div
+          googleMapMarker
+          [position]="position"
+          [title]="title"
+          [content]="content"
+        ></div>
+      </app-google-maps>
+
+      <div >
+        <div>
+          <input
+            type="text"
+            id="input-search"
+            [(ngModel)]="address"
+            (keyup.enter)="search(address)"
+            placeholder="Address"
+          />
+          <div >
+            <button
+              type="button"
+              title="search"
+              (click)="search(address)"
+            >
+            </button>
+          </div>
+  </div>
+
