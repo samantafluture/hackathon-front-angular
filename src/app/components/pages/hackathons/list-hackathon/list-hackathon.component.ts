@@ -28,7 +28,7 @@ export class ListHackathonComponent implements OnInit {
     debounceTime(TYPING_DEBOUNCE_TIME),
     filter((typedValue) => typedValue.length >= 3 || !typedValue.length),
     distinctUntilChanged(),
-    switchMap((typedValue) => this.searchService.searchHackathons(typedValue))
+    switchMap((typedValue) => this.searchService.searchHackathonDate(typedValue))
   );
   hackathons$ = merge(this.allHackthons$, this.filteredByInput$);
 
