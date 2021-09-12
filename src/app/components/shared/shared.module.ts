@@ -5,10 +5,21 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
-  declarations: [HackathonFormComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    HackathonFormComponent,
+    HeaderComponent,
+    FooterComponent,
+    MapComponent,
+  ],
   imports: [CommonModule, FormsModule, RouterModule],
-  exports: [HackathonFormComponent, HeaderComponent, FooterComponent],
+  exports: [
+    HackathonFormComponent,
+    HeaderComponent,
+    FooterComponent,
+    MapComponent,
+  ],
 })
 export class SharedModule {}

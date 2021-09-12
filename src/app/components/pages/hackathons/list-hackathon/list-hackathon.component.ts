@@ -20,7 +20,7 @@ const TYPING_DEBOUNCE_TIME = 300;
 })
 export class ListHackathonComponent implements OnInit {
   hackathons: Hackathon[] = [];
-  hackathonId!: string;
+  hackathonId!: string
 
   searchInput = new FormControl();
   allHackthons$ = this.hackathonService.getAllHackathons();
@@ -30,6 +30,7 @@ export class ListHackathonComponent implements OnInit {
     distinctUntilChanged(),
     switchMap((typedValue) => this.searchService.searchHackathonDate(typedValue))
   );
+
   hackathons$ = merge(this.allHackthons$, this.filteredByInput$);
 
   constructor(
@@ -53,4 +54,6 @@ export class ListHackathonComponent implements OnInit {
       (error) => console.log(error)
     );
   }
+
+
 }
