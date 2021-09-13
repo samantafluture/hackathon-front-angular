@@ -7,7 +7,7 @@ TODO
 - [x] extract 'sortedBy...' funcs to a helper folder 
 - [x] create btns for the new methods:
       getFreeHackathons, getRemoteHackathons
-- [ ] update length of total results showing (html)
+- [x] update length of total results showing (html)
 
 TODO
 

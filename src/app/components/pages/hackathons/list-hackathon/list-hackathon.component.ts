@@ -75,5 +75,9 @@ export class ListHackathonComponent implements OnInit {
     this.hackathons$ = this.remoteHackathons$;
   }
 
+  clear() {
+    this.hackathons$ = this.allHackthons$;
+  }
+
 
 }

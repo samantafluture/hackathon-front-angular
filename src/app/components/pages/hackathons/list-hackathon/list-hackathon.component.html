@@ -1,11 +1,10 @@
 <div class="container">
-  <h1>
-    Hackathons <span>({{ hackathons.length }})</span>
-  </h1>
+  <h1>Hackathons</h1>
   <form>
     <input placeholder="Search for hackathons..." [formControl]="searchInput" />
     <button (click)="filterFree()">Free</button>
     <button (click)="filterRemote()">Remote</button>
+    <button (click)="clear()">Clear Results</button>
   </form>
   <app-map></app-map>
   <table>
@@ -20,6 +19,9 @@
       </tr>
     </thead>
     <tbody *ngIf="hackathons$ | async as hackathons; else empty">
+      <h2>
+        Hackathons Results <span>({{ hackathons.length }})</span>
+      </h2>
       <tr *ngFor="let hackathon of hackathons">
         <td>{{ hackathon.name }}</td>
         <td>{{ hackathon.description }}</td>
