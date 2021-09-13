@@ -9,10 +9,6 @@ import { AddHackathonComponent } from './components/pages/hackathons/add-hackath
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditHackathonComponent } from './components/pages/hackathons/edit-hackathon/edit-hackathon.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
-import { MapHackathonComponent } from './components/pages/hackathons/map-hackathon/map-hackathon.component';
-import { GoogleMapMarkerDirective } from './directives/google-map-marker.directive';
-import { MapService } from './services/map.service';
-import { GeocodingService } from './services/geocoding.service';
 
 @NgModule({
   declarations: [
@@ -21,8 +17,6 @@ import { GeocodingService } from './services/geocoding.service';
     AddHackathonComponent,
     EditHackathonComponent,
     NotFoundComponent,
-    MapHackathonComponent,
-    GoogleMapMarkerDirective,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +26,6 @@ import { GeocodingService } from './services/geocoding.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [MapService, GeocodingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

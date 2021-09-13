@@ -5,30 +5,23 @@ DONE
 - [x] extract 'sortedBy...' funcs to a helper folder 
 - [x] create btns for the new methods: getFreeHackathons, getRemoteHackathons
 - [x] update length of total results showing (html)
+- [x] create new filter by location:
+      - if user search params contains or match hackathon.location,
+      - show filtered results by this location
 
 TODO
 
-# search.service.ts
+# google maps
 
-- [ ] create new filter by location:
-      if user search params contains or match hackathon.location,
-      show filtered results by this location
-
+- [ ] from address to lat lgn
+- [ ] get json address to lat lgn json
+- [ ] initial google maps:
+      - get all locations from listed hackathons 
+      - show markers on the map with zoom out
 - [ ] create a search bar with address autocomplete, permitting only address
 
 TODO
 
-# google-maps.component.ts
+# css
 
-- [ ] initial map = get current location:
-      use same funcs from map-component
-
-TODO
-
-# map-hackathon.component.ts
-
-- [ ] initial map = get all locations from listed hackathons
-      & show markers on the map
-
-
-
+- [ ] styles

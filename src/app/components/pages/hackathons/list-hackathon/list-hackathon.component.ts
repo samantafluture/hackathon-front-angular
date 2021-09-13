@@ -9,7 +9,6 @@ import {
   filter,
   map,
   switchMap,
-  tap,
 } from 'rxjs/operators';
 import { SearchService } from 'src/app/services/search.service';
 import { isFree, isRemoteAvaiable, matchLocation } from 'src/app/utils/filters';
@@ -24,7 +23,7 @@ const TYPING_DEBOUNCE_TIME = 300;
 export class ListHackathonComponent implements OnInit {
   hackathons: Hackathon[] = [];
   hackathonId!: string;
-  location!: string;
+  location!: any;
 
   searchInput = new FormControl();
 
@@ -86,7 +85,7 @@ export class ListHackathonComponent implements OnInit {
     this.hackathons$ = this.allHackthons$;
   }
 
-  filterLocation(location: string) {
+  filterLocation(location: any) {
     this.location = location;
 
     this.hackathons$ = this.hackathonService

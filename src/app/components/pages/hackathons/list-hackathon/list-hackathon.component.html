@@ -5,10 +5,10 @@
     <button (click)="filterFree()">Free</button>
     <button (click)="filterRemote()">Remote</button>
     <button (click)="clear()">Clear Results</button>
-    <input placeholder="Where are you?" #location >
-    <button (click)="filterLocation(location.value)" >Filter by Location</button>
+    <app-location-input  #location></app-location-input>
+    <!-- <input placeholder="Where are you?" #location > -->
+    <button (click)="filterLocation(location.userAddress)" >Filter by Location</button>
   </form>
-  <app-map></app-map>
   <table>
     <thead>
       <tr>
