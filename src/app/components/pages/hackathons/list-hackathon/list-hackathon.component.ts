@@ -8,10 +8,11 @@ import {
   distinctUntilChanged,
   filter,
   map,
-  switchMap
+  switchMap,
+  tap,
 } from 'rxjs/operators';
 import { SearchService } from 'src/app/services/search.service';
-import { isFree, isRemoteAvaiable } from 'src/app/utils/filters';
+import { isFree, isRemoteAvaiable, matchLocation } from 'src/app/utils/filters';
 
 const TYPING_DEBOUNCE_TIME = 300;
 
@@ -22,26 +23,32 @@ const TYPING_DEBOUNCE_TIME = 300;
 })
 export class ListHackathonComponent implements OnInit {
   hackathons: Hackathon[] = [];
-  hackathonId!: string
+  hackathonId!: string;
+  location!: string;
 
   searchInput = new FormControl();
+
   allHackthons$ = this.hackathonService.getAllHackathons();
   filteredByInput$ = this.searchInput.valueChanges.pipe(
     debounceTime(TYPING_DEBOUNCE_TIME),
     filter((typedValue) => typedValue.length >= 3 || !typedValue.length),
     distinctUntilChanged(),
-    switchMap((typedValue) => this.searchService.searchHackathonDate(typedValue))
-  );
-  freeHackathons$ = this.hackathonService.getAllHackathons().pipe(
-    map((hackathons) =>
-      hackathons.filter((hackathon) => isFree(hackathon))
+    switchMap((typedValue) =>
+      this.searchService.searchHackathonDate(typedValue)
     )
   );
-  remoteHackathons$ = this.hackathonService.getAllHackathons().pipe(
-    map((hackathons) =>
-      hackathons.filter((hackathon) => isRemoteAvaiable(hackathon))
-    )
-  );
+  freeHackathons$ = this.hackathonService
+    .getAllHackathons()
+    .pipe(
+      map((hackathons) => hackathons.filter((hackathon) => isFree(hackathon)))
+    );
+  remoteHackathons$ = this.hackathonService
+    .getAllHackathons()
+    .pipe(
+      map((hackathons) =>
+        hackathons.filter((hackathon) => isRemoteAvaiable(hackathon))
+      )
+    );
 
   hackathons$ = merge(this.allHackthons$, this.filteredByInput$);
 
@@ -79,5 +86,17 @@ export class ListHackathonComponent implements OnInit {
     this.hackathons$ = this.allHackthons$;
   }
 
+  filterLocation(location: string) {
+    this.location = location;
 
+    this.hackathons$ = this.hackathonService
+      .getAllHackathons()
+      .pipe(
+        map((hackathons) =>
+          hackathons.filter((hackathon: Hackathon) =>
+            matchLocation(hackathon, this.location)
+          )
+        )
+      );
+  }
 }

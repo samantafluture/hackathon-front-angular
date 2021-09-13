@@ -1,12 +1,9 @@
-TODO
-
-# hackathin.service.ts 
+DONE
 
 - [x] get free hackathons method (sorted by dates)
 - [x] get remote hackathons method (sorted by date)
 - [x] extract 'sortedBy...' funcs to a helper folder 
-- [x] create btns for the new methods:
-      getFreeHackathons, getRemoteHackathons
+- [x] create btns for the new methods: getFreeHackathons, getRemoteHackathons
 - [x] update length of total results showing (html)
 
 TODO
@@ -17,9 +14,7 @@ TODO
       if user search params contains or match hackathon.location,
       show filtered results by this location
 
-- [ ] create a search bar for this feature:
-      with address autocomplete,
-      permitting only address
+- [ ] create a search bar with address autocomplete, permitting only address
 
 TODO
 

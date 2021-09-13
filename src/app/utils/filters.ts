@@ -40,3 +40,12 @@ export function isRemoteAvaiable(hackathon: Hackathon) {
       : false;
   return remoteHackathon;
 }
+
+export function matchLocation(hackathon: Hackathon, location: string) {
+  const hackathonLocation = hackathon.location.toLowerCase();
+  location = location.toLowerCase();
+
+  const localHackathon =
+    hackathonLocation.includes(location) ? true : false;
+  return localHackathon;
+}
