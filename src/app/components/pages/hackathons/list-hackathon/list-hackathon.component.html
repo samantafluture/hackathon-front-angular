@@ -1,9 +1,11 @@
 <div class="container">
   <h1>
-    Hackathons <span class="qtd">({{ hackathons.length }})</span>
+    Hackathons <span>({{ hackathons.length }})</span>
   </h1>
   <form>
     <input placeholder="Search for hackathons..." [formControl]="searchInput" />
+    <button (click)="filterFree()">Free</button>
+    <button (click)="filterRemote()">Remote</button>
   </form>
   <app-map></app-map>
   <table>

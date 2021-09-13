@@ -7,9 +7,11 @@ import {
   debounceTime,
   distinctUntilChanged,
   filter,
+  map,
   switchMap
 } from 'rxjs/operators';
 import { SearchService } from 'src/app/services/search.service';
+import { isFree, isRemoteAvaiable } from 'src/app/utils/filters';
 
 const TYPING_DEBOUNCE_TIME = 300;
 
@@ -29,6 +31,16 @@ export class ListHackathonComponent implements OnInit {
     filter((typedValue) => typedValue.length >= 3 || !typedValue.length),
     distinctUntilChanged(),
     switchMap((typedValue) => this.searchService.searchHackathonDate(typedValue))
+  );
+  freeHackathons$ = this.hackathonService.getAllHackathons().pipe(
+    map((hackathons) =>
+      hackathons.filter((hackathon) => isFree(hackathon))
+    )
+  );
+  remoteHackathons$ = this.hackathonService.getAllHackathons().pipe(
+    map((hackathons) =>
+      hackathons.filter((hackathon) => isRemoteAvaiable(hackathon))
+    )
   );
 
   hackathons$ = merge(this.allHackthons$, this.filteredByInput$);
@@ -53,6 +65,14 @@ export class ListHackathonComponent implements OnInit {
       },
       (error) => console.log(error)
     );
+  }
+
+  filterFree() {
+    this.hackathons$ = this.freeHackathons$;
+  }
+
+  filterRemote() {
+    this.hackathons$ = this.remoteHackathons$;
   }
 
 

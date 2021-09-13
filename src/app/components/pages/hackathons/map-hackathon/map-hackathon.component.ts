@@ -63,6 +63,12 @@ export class MapHackathonComponent implements OnInit {
     this.message = '';
   }
 
+  /* TODO
+  *
+  * [1] initial map = get all locations from listed hackathons
+  *     & show markers on the map
+  * */
+
   ngOnInit(): void {
     // Autocomplete: it needs 'places' library.
     /* const el: HTMLInputElement = this.elementRef.nativeElement.querySelector('#input-search');

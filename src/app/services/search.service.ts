@@ -1,8 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Hackathon, Hackathons } from '../interfaces/hackathon';
+import { Hackathons } from '../interfaces/hackathon';
 import { map } from 'rxjs/operators';
+import { sortByDate, sortByPrice, isFree, isRemoteAvaiable } from '../utils/filters';
 
 const API = environment.apiUrl;
 
@@ -29,7 +30,7 @@ export class SearchService {
       .pipe(
         map((hackathons) =>
           hackathons.sort((hackathonA, hackathonB) =>
-            this.sortByPrice(hackathonA, hackathonB)
+            sortByPrice(hackathonA, hackathonB)
           )
         )
       );
@@ -42,7 +43,7 @@ export class SearchService {
       .pipe(
         map((hackathons) =>
           hackathons.sort((hackathonA, hackathonB) =>
-            this.sortByDate(hackathonA, hackathonB)
+            sortByDate(hackathonA, hackathonB)
           )
         )
       );
@@ -54,7 +55,7 @@ export class SearchService {
       .get<Hackathons>(`${API}/event/search`, { params })
       .pipe(
         map((hackathons) =>
-          hackathons.filter((hackathon) => this.isFree(hackathon))
+          hackathons.filter((hackathon) => isFree(hackathon))
         )
       );
   }
@@ -65,49 +66,9 @@ export class SearchService {
       .get<Hackathons>(`${API}/event/search`, { params })
       .pipe(
         map((hackathons) =>
-          hackathons.filter((hackathon) => this.isRemoteAvaiable(hackathon))
+          hackathons.filter((hackathon) => isRemoteAvaiable(hackathon))
         )
       );
   }
 
-  private sortByPrice(hackathonA: Hackathon, hackathonB: Hackathon) {
-    if (hackathonA.price > hackathonB.price) {
-      return 1;
-    }
-    if (hackathonA.price < hackathonB.price) {
-      return -1;
-    }
-    return 0;
-  }
-
-  private sortByDate(hackathonA: Hackathon, hackathonB: Hackathon) {
-    let dateA = new Date(hackathonA.date);
-    let dateB = new Date(hackathonB.date);
-
-    if (dateA > dateB) {
-      return 1;
-    }
-    if (dateA < dateB) {
-      return -1;
-    }
-    return 0;
-  }
-
-  private isFree(hackathon: Hackathon) {
-    const freeHackthon = hackathon.price === 0 ? true : false;
-    return freeHackthon;
-  }
-
-  private isRemoteAvaiable(hackathon: Hackathon) {
-    const remoteHackathon =
-      hackathon.location.includes('Remote') ||
-      hackathon.location.includes('remote') ||
-      hackathon.location.includes('Online') ||
-      hackathon.location.includes('online') ||
-      hackathon.location.includes('Virtual') ||
-      hackathon.location.includes('virtual')
-        ? true
-        : false;
-    return remoteHackathon;
-  }
 }

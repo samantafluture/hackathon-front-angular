@@ -40,6 +40,12 @@ export class GoogleMapsComponent implements OnInit, OnChanges {
 
   constructor(public map: MapService, private elementRef: ElementRef) { }
 
+  /* TODO
+  *
+  * [1] initial map = get current location:
+  *     use same funcs from map-component
+  * */
+
   ngOnInit(): void {
     const el: HTMLElement = this.elementRef.nativeElement.querySelector('#map');
     this.createMap(el);
