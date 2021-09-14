@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LocationInputComponent } from './location-input/location-input.component';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,15 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     HeaderComponent,
     FooterComponent,
     LocationInputComponent,
+    LoaderComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule, GooglePlaceModule],
   exports: [
     HackathonFormComponent,
     HeaderComponent,
     FooterComponent,
-    LocationInputComponent
+    LocationInputComponent,
+    LoaderComponent
   ],
 })
 export class SharedModule {}

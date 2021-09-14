@@ -14,7 +14,11 @@ TODO
 
 # css, elementos
 
-- [ ] loading enquanto os dados da api não carregam
-- [ ] styles
+- [ ] styles dos componentes
 - [ ] adicionar mais hackathons
 - [ ] criar paginação
+
+
+
+
+

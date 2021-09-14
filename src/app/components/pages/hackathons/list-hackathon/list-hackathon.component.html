@@ -1,12 +1,10 @@
 <div class="container">
-  <h1>Hackathons</h1>
   <form>
     <input placeholder="Search for hackathons..." [formControl]="searchInput" />
     <button (click)="filterFree()">Free</button>
     <button (click)="filterRemote()">Remote</button>
     <button (click)="clear()">Clear Results</button>
     <app-location-input  #location></app-location-input>
-    <!-- <input placeholder="Where are you?" #location > -->
     <button (click)="filterLocation(location.userAddress)" >Filter by Location</button>
   </form>
   <table>
@@ -22,7 +20,7 @@
     </thead>
     <tbody *ngIf="hackathons$ | async as hackathons; else empty">
       <h2>
-        Hackathons Results <span>({{ hackathons.length }})</span>
+        Showing {{ hackathons.length }} Hackathons
       </h2>
       <tr *ngFor="let hackathon of hackathons">
         <td>{{ hackathon.name }}</td>
@@ -38,9 +36,7 @@
       </tr>
     </tbody>
     <ng-template #empty>
-      <tbody>
-        No events...
-      </tbody>
+     <app-loader></app-loader>
     </ng-template>
   </table>
 </div>
