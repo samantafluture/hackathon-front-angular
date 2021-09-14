@@ -8,20 +8,13 @@ DONE
 - [x] create new filter by location:
       - if user search params contains or match hackathon.location,
       - show filtered results by this location
+- [x] create a search bar with address autocomplete, permitting only address
 
 TODO
 
-# google maps
+# css, elementos
 
-- [ ] from address to lat lgn
-- [ ] get json address to lat lgn json
-- [ ] initial google maps:
-      - get all locations from listed hackathons 
-      - show markers on the map with zoom out
-- [ ] create a search bar with address autocomplete, permitting only address
-
-TODO
-
-# css
-
+- [ ] loading enquanto os dados da api não carregam
 - [ ] styles
+- [ ] adicionar mais hackathons
+- [ ] criar paginação
