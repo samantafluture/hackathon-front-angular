@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   brandName: string = "Hackafy";
+  profilePhoto = "https://hostmyimg.s3.amazonaws.com/samanta.jpeg"
+  username = "Samanta Fluture"
 
   constructor() { }
 

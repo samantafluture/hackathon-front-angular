@@ -31,12 +31,7 @@
     <a [routerLink]="['/add']">Add Hackathon</a>
   </nav>
   <div class="user-settings">
-    <img
-      class="user-profile"
-      src="https://hostmyimg.s3.amazonaws.com/samanta.jpeg"
-      alt=""
-    />
-    <div class="user-name">Samanta Fluture</div>
+    <img class="user-profile" [src]="profilePhoto" [alt]="username" />
+    <div class="user-name">{{ username }}</div>
   </div>
 </header>
-

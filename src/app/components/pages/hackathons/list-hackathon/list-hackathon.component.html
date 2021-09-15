@@ -1,17 +1,40 @@
-<div class="container">
-  <form>
-    <input placeholder="Search for hackathons..." [formControl]="searchInput" />
-    <button (click)="filterFree()">Free</button>
-    <button (click)="filterRemote()">Remote</button>
-    <button (click)="clear()">Clear Results</button>
-    <app-location-input  #location></app-location-input>
-    <button (click)="filterLocation(location.userAddress)" >Filter by Location</button>
+<section>
+  <form class="hackathon-form">
+    <div class="hackathon-search">
+      <div class="search-bar">
+        <input
+          class="search-input"
+          placeholder="Search for hackathons..."
+          [formControl]="searchInput"
+        />
+      </div>
+    </div>
+    <div class="hackathon-filter">
+      <h3>Filter By:</h3>
+      <div class="filter-location">
+        <div class="search-location">
+          <app-location-input #location></app-location-input>
+        </div>
+        <button
+          class="search-button"
+          (click)="filterLocation(location.userAddress)"
+        >
+          Around Here
+        </button>
+      </div>
+      <div class="filter-btns">
+        <button (click)="filterFree()">Free</button>
+        <button (click)="filterRemote()">Remote</button>
+      </div>
+      <div class="clear-btn">
+        <button (click)="clear()">Clear Results</button>
+      </div>
+    </div>
   </form>
+
   <table>
     <tbody *ngIf="hackathons$ | async as hackathons; else empty">
-      <h2>
-        Showing {{ hackathons.length }} Hackathons
-      </h2>
+      <h2>Showing {{ hackathons.length }} Hackathons</h2>
       <tr *ngFor="let hackathon of hackathons">
         <td>{{ hackathon.name }}</td>
         <td>{{ hackathon.description }}</td>
@@ -26,7 +49,7 @@
       </tr>
     </tbody>
     <ng-template #empty>
-     <app-loader></app-loader>
+      <app-loader></app-loader>
     </ng-template>
   </table>
-</div>
+</section>

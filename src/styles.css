@@ -1,26 +1,30 @@
 * {
   box-sizing: border-box;
- }
+  margin: 0 auto;
+}
 
- html {
+html {
   -webkit-font-smoothing: antialiased;
- }
+}
 
- body {
+body {
   background-color: #fafafb;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #2f2f33;
- }
-
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
 }
 
-.ng-invalid:not(form)  {
-  border-left: 5px solid #a94442; /* red */
+.pac-target-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-top: 5px;
+  background-color: #fff;
 }
 
-#map {
-  height: 60vh;
+.pac-target-input:focus {
+  box-shadow: 0px 2px 0px 0px #0162ff;
 }

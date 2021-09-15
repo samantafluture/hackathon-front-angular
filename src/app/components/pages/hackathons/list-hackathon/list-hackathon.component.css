@@ -1,4 +1,115 @@
-#map {
-  height: 500px;
+.hackathon-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+  background: white;
+  padding: 1em 2.5em 1em 2.5em;
+  margin: 2rem 2.5rem 1rem 2.5rem;
+}
+
+.search-bar {
+  display: block;
   width: 100%;
- }
+}
+
+.search-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.search-input:focus {
+  box-shadow: 0px 2px 0px 0px #0162ff;
+}
+
+.hackathon-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin: 0 auto;
+  cursor: pointer;
+  /* padding: 0 2.5em 0 2.5em; */
+  /* background: white; */
+}
+
+.filter-location,
+.filter-btns {
+  display: flex;
+  align-items: center;
+}
+
+.search-location {
+  background: white;
+  flex-grow: 2;
+  line-height: 3rem;
+  padding: 0 2rem 0 2rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 0.75rem;
+}
+
+.search-button {
+  display: inline-block;
+  flex-grow: 1;
+  line-height: 3rem;
+  padding: 0 2em;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 200;
+  border: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+  background-color: #0162ff;
+  transition: background-color 0.8s ease;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #1153bf;
+}
+
+.filter-btns button {
+  display: inline-block;
+  flex-grow: 1;
+  line-height: 3rem;
+  padding: 0 2em;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 200;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #0162ff;
+  transition: background-color 0.8s ease;
+  cursor: pointer;
+
+  margin: 0.5rem;
+}
+
+.clear-btn button {
+  display: inline-block;
+  flex-grow: 1;
+  line-height: 3rem;
+  padding: 0 2em;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 200;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #0162ff;
+  transition: background-color 0.8s ease;
+  cursor: pointer;
+}
