@@ -8,16 +8,6 @@
     <button (click)="filterLocation(location.userAddress)" >Filter by Location</button>
   </form>
   <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th>Location</th>
-        <th>Date</th>
-        <th>URL</th>
-      </tr>
-    </thead>
     <tbody *ngIf="hackathons$ | async as hackathons; else empty">
       <h2>
         Showing {{ hackathons.length }} Hackathons
