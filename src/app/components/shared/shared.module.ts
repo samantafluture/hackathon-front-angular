@@ -23,7 +23,8 @@ import { LoaderComponent } from './loader/loader.component';
     HeaderComponent,
     FooterComponent,
     LocationInputComponent,
-    LoaderComponent
+    LoaderComponent,
+
   ],
 })
 export class SharedModule {}

@@ -15,8 +15,14 @@ TODO
 # css, elementos
 
 - [ ] styles dos componentes
+      - faltando: home
+      - responsivo, mobile styles
+      - root styles no global
+      - favicon com logo
 - [ ] adicionar mais hackathons
-- [ ] criar paginação
+- [ ] criar paginação ou carregamento infinito
+- [ ] a fazer no futuro: 
+      filtro pro data, filtro por range de preço, adicionar na api tags, autenticação por google via firebase
 
 
 
