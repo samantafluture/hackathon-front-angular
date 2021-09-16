@@ -34,7 +34,7 @@
 
   <table>
     <tbody *ngIf="hackathons$ | async as hackathons; else empty">
-      <h2>Showing {{ hackathons.length }} Hackathons</h2>
+      <h2>Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons</h2>
       <tr *ngFor="let hackathon of hackathons">
         <td>{{ hackathon.name }}</td>
         <td>{{ hackathon.description }}</td>
@@ -42,9 +42,9 @@
         <td>{{ hackathon.location }}</td>
         <td>{{ hackathon.date | date: "MM/dd/yyyy" }}</td>
         <td>{{ hackathon.url }}</td>
-        <td>
-          <a [routerLink]="['/edit/' + hackathon._id]"> Edit </a>
-          <button (click)="remove(hackathon._id)">Remove</button>
+        <td class="list-btns">
+          <a class="btn-edit" [routerLink]="['/edit/' + hackathon._id]"><i class="fas fa-pen-square fa-lg"></i></a>
+          <button class="btn-remove" (click)="remove(hackathon._id)"><i class="fas fa-trash fa-lg"></i></button>
         </td>
       </tr>
     </tbody>

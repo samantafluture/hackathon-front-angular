@@ -81,7 +81,8 @@ export class ListHackathonComponent implements OnInit {
   }
 
   clear() {
-    this.hackathons$ = this.allHackthons$;
+    // this.hackathons$ = this.allHackthons$;
+    window.location.reload();
     this.searchInput.reset();
   }
 

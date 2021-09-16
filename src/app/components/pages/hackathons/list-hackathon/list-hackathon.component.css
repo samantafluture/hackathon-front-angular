@@ -77,11 +77,38 @@
   font-family: "Poppins", sans-serif;
 }
 
-.search-button:hover {
+.search-button:hover,
+.filter-btns button:hover {
   background-color: #1153bf;
 }
 
-.filter-btns button {
+a {
+  text-decoration: none;
+}
+
+i, .emphasis {
+  color: #0162ff;
+}
+
+i:hover {
+  color: #1153bf;
+}
+
+.list-btns button, .list-btns a {
+  line-height: 3rem;
+  padding: 0 2em;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 200;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  background-color: transparent;
+}
+
+.filter-btns button{
+  font-family: "Poppins", sans-serif;
   display: inline-block;
   flex-grow: 1;
   line-height: 3rem;
@@ -95,7 +122,6 @@
   background-color: #0162ff;
   transition: background-color 0.8s ease;
   cursor: pointer;
-
   margin: 0.5rem;
 }
 
@@ -110,7 +136,12 @@
   border: 0;
   border-radius: 5px;
   color: white;
-  background-color: #0162ff;
+  background-color: rgb(201, 201, 201);
   transition: background-color 0.8s ease;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.clear-btn button:hover {
+  background-color: rgb(152, 152, 152);
 }
