@@ -1,6 +1,6 @@
 <header class="header">
-  <div class="logo">
-    <svg
+  <a [routerLink]="['/']" class="logo">
+      <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.0"
       width="512.000000pt"
@@ -25,7 +25,7 @@
       </g>
     </svg>
     {{ brandName }}
-  </div>
+  </a>
   <nav class="menu">
     <a [routerLink]="['/']" class="active">Find Hackathon</a>
     <a [routerLink]="['/add']">Add Hackathon</a>
