@@ -27,9 +27,10 @@ input {
   border: none;
   background-color: #fff;
   margin-top: 5px;
+  font-family: "Poppins", sans-serif;
 }
 
-input:focus {
+input:focus, textarea:focus {
   border: 1px solid #0162ff;
 }
 
@@ -41,19 +42,42 @@ input:focus {
   margin-left: 1rem;
 }
 
-.field-price {
+.field-element {
   display: flex;
   width: 100%;
 }
 
-.field-group span {
+.field-element span {
   position: absolute;
   margin-top: 0.30rem;
   padding: 1.5rem;
 }
 
-#price {
+textarea {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  -webkit-appearance: none;
+  outline: 0;
+  appearance: none;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  resize: vertical;
+}
+
+#price, #location {
   padding: 1.5rem 1.5rem 1.5rem 3rem;
+}
+
+#price {
+  font-size: 1rem;
 }
 
 .ng-valid[required],
@@ -68,3 +92,63 @@ input:focus {
 .alert {
   color: #F26966;
 }
+
+.field-message {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.field-message .alert {
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.form-btn {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-submit, .btn-cancel {
+  width: 100%;
+  padding: 1.5rem;
+  line-height: 3rem;
+  padding: 0 2em;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: inherit;
+  border: 0;
+  color: white;
+  transition: background-color 0.8s ease;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-submit {
+  margin-left: 1.5rem;
+  background-color: #0162ff;
+ }
+
+ .btn-submit:hover {
+  background-color: #1153bf;
+}
+
+ .btn-submit:disabled {
+  background-color: rgb(201, 201, 201);
+  cursor: default;
+ }
+
+ .btn-cancel {
+  background-color: rgb(201, 201, 201);
+ }
+
+ .btn-cancel:hover {
+  background-color: rgb(152, 152, 152);
+ }

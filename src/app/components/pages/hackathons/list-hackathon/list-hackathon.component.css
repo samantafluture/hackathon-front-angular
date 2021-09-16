@@ -74,6 +74,7 @@
   background-color: #0162ff;
   transition: background-color 0.8s ease;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .search-button:hover {

@@ -30,5 +30,6 @@ body {
 }
 
 i {
-  color: #0162ff;
+  /* color: #0162ff; */
+  color: rgb(201, 201, 201);
 }
