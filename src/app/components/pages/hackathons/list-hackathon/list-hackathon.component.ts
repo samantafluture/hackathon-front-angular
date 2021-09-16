@@ -11,7 +11,7 @@ import {
   switchMap,
 } from 'rxjs/operators';
 import { SearchService } from 'src/app/services/search.service';
-import { isFree, isRemoteAvaiable, matchLocation } from 'src/app/utils/filters';  
+import { isFree, isRemoteAvaiable, matchLocation } from 'src/app/utils/filters';
 
 const TYPING_DEBOUNCE_TIME = 300;
 
@@ -24,7 +24,6 @@ export class ListHackathonComponent implements OnInit {
   hackathons: Hackathon[] = [];
   hackathonId!: string;
   location!: any;
-
   searchInput = new FormControl();
 
   allHackthons$ = this.hackathonService.getAllHackathons();
