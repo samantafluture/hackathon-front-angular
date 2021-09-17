@@ -9,20 +9,25 @@ DONE
       - if user search params contains or match hackathon.location,
       - show filtered results by this location
 - [x] create a search bar with address autocomplete, permitting only address
+- [x] styles dos componentes e páginas
+- [x] favicon
 
 TODO
 
 # css, elementos
 
-- [ ] styles dos componentes
-      - faltando: home
-      - responsivo, mobile styles
-      - root styles no global
-      - favicon com logo
+- refatorar css:
+  - responsivo, mobile styles
+  - root styles no global
+  - separar/extrair mais componentes?
+- [ ] criar paginação:
+      https://jasonwatmore.com/post/2019/06/18/angular-8-simple-pagination-example
 - [ ] adicionar mais hackathons
-- [ ] criar paginação ou carregamento infinito
-- [ ] a fazer no futuro: 
-      filtro pro data, filtro por range de preço, adicionar na api tags, autenticação por google via firebase
+
+# deploy
+
+- git hub bonitinho
+- deploy vercel
 
 
 
