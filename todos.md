@@ -11,12 +11,13 @@ DONE
 - [x] create a search bar with address autocomplete, permitting only address
 - [x] styles dos componentes e páginas
 - [x] favicon
+- [x] deploy vercel
 
 TODO
 
 # css, elementos
 
-- refatorar css:
+- [ ] refatorar css:
   - responsivo, mobile styles
   - root styles no global
   - separar/extrair mais componentes?
@@ -26,8 +27,8 @@ TODO
 
 # deploy
 
-- git hub bonitinho
-- deploy vercel
+- [ ] git hub bonitinho
+
 
 
 
