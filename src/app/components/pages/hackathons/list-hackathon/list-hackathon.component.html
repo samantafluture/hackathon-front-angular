@@ -2,6 +2,7 @@
   <form class="hackathon-form">
     <div class="hackathon-search">
       <div class="search-bar">
+        <span><i class="fas fa-search"></i></span>
         <input
           class="search-input"
           placeholder="Search for hackathons..."
@@ -32,23 +33,35 @@
     </div>
   </form>
 
-  <table>
-    <tbody *ngIf="hackathons$ | async as hackathons; else empty">
-      <h2>Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons</h2>
-      <tr *ngFor="let hackathon of hackathons">
-        <td>{{ hackathon.name }}</td>
-        <td>{{ hackathon.description }}</td>
-        <td>{{ hackathon.price | currency }}</td>
-        <td>{{ hackathon.location }}</td>
-        <td>{{ hackathon.date | date: "MM/dd/yyyy" }}</td>
-        <td>{{ hackathon.url }}</td>
-        <td class="list-btns">
-          <a class="btn-edit" [routerLink]="['/edit/' + hackathon._id]"><i class="fas fa-pen-square fa-lg"></i></a>
-          <button class="btn-remove" (click)="remove(hackathon._id)"><i class="fas fa-trash fa-lg"></i></button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <section class="hackathins-list">
+    <div *ngIf="hackathons$ | async as hackathons; else empty">
+      <h2 class="hackathon-list__title">
+        Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons
+      </h2>
+      <div class="hackathon-list__results">
+        <div *ngFor="let hackathon of hackathons" class="hackathon-card">
+          <a [href]="hackathon.url" class="card-hero" target="_blank">
+            <h3 class="card-hero__title">{{ hackathon.name }}</h3>
+            <p class="card-hero__subtitle">{{ hackathon.description }}</p>
+            <a [href]="hackathon.url"><i class="fas fa-link fa-lg"></i></a>
+          </a>
+          <div class="card-info">
+            <p><i class="fas fa-map-marker-alt"></i>{{ hackathon.location }}</p>
+            <p><i class="fas fa-calendar"></i>{{ hackathon.date | date }}</p>
+            <p><i class="fas fa-dollar-sign"></i>{{ hackathon.price | number }}</p>
+          </div>
+          <div class="list-btns">
+            <a class="btn-edit" [routerLink]="['/edit/' + hackathon._id]"
+              ><i class="fas fa-pencil-alt fa-lg"></i
+            ></a>
+            <button class="btn-remove" (click)="remove(hackathon._id)">
+              <i class="fas fa-trash fa-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <ng-template #empty>
     <app-loader></app-loader>
   </ng-template>
