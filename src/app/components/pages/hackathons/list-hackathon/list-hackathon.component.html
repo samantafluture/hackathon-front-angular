@@ -1,6 +1,6 @@
 <section>
-  <form class="hackathon-form">
-    <div class="hackathon-search">
+  <form>
+    <div class="search">
       <div class="search-bar">
         <span><i class="fas fa-search"></i></span>
         <input
@@ -10,14 +10,14 @@
         />
       </div>
     </div>
-    <div class="hackathon-filter">
+    <div class="filter">
       <h3>Filter By:</h3>
       <div class="filter-location">
-        <div class="search-location">
+        <div class="filter-location-input">
           <app-location-input #location></app-location-input>
         </div>
         <button
-          class="search-button"
+          class="filter-location-btn"
           (click)="filterLocation(location.userAddress)"
         >
           Around Here
@@ -33,24 +33,24 @@
     </div>
   </form>
 
-  <section class="hackathins-list">
+  <section class="list-area">
     <div *ngIf="hackathons$ | async as hackathons; else empty">
-      <h2 class="hackathon-list__title">
+      <h2 class="list-area-title">
         Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons
       </h2>
-      <div class="hackathon-list__results">
-        <div *ngFor="let hackathon of hackathons" class="hackathon-card">
-          <a [href]="hackathon.url" class="card-hero" target="_blank">
-            <h3 class="card-hero__title">{{ hackathon.name }}</h3>
-            <p class="card-hero__subtitle">{{ hackathon.description }}</p>
+      <div class="list-cards">
+        <div *ngFor="let hackathon of hackathons" class="card-item">
+          <a [href]="hackathon.url" class="card-header" target="_blank">
+            <h3 class="card-title">{{ hackathon.name }}</h3>
+            <p class="card-subtitle">{{ hackathon.description }}</p>
             <a [href]="hackathon.url"><i class="fas fa-link fa-lg"></i></a>
           </a>
-          <div class="card-info">
+          <div class="card-details">
             <p><i class="fas fa-map-marker-alt"></i>{{ hackathon.location }}</p>
             <p><i class="fas fa-calendar"></i>{{ hackathon.date | date }}</p>
             <p><i class="fas fa-dollar-sign"></i>{{ hackathon.price | number }}</p>
           </div>
-          <div class="list-btns">
+          <div class="card-btns">
             <a class="btn-edit" [routerLink]="['/edit/' + hackathon._id]"
               ><i class="fas fa-pencil-alt fa-lg"></i
             ></a>

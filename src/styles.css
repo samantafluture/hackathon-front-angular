@@ -1,3 +1,26 @@
+:root {
+  --color-bg: #fafafb;
+  --color-type: #2f2f33;
+  --color-primary: #0162ff;
+  --color-seconday: #1153bf;
+  --alert-green: #77c97b;
+  --alert-red: #F26966;;
+  --medium-grey: rgb(201, 201, 201);
+  --dark-grey: rgb(152, 152, 152);
+  --white: #fff;
+  --color-loader-transp: rgba(255, 255, 255, 0.5);
+  --color-loader-white: rgba(255, 255, 255, 1);
+
+  --font-primary: "Poppins", sans-serif;
+  --font-size-body: 1rem;
+  --font-size-header: 0.875rem;
+  --font-size-btns: 0.85rem;
+  --font-size-logo: 1.125rem;
+
+  --border-radius-general: 5px;
+  --transition: background-color 0.8s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -8,28 +31,14 @@ html {
 }
 
 body {
-  background-color: #fafafb;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  color: #2f2f33;
-}
-
-.pac-target-input {
-  border: none;
-  appearance: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin-top: 5px;
-  background-color: #fff;
-}
-
-.pac-target-input:focus {
-  box-shadow: 0px 2px 0px 0px #0162ff;
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  color: var(--color-type);
 }
 
 i {
-  /* color: #0162ff; */
-  color: rgb(201, 201, 201);
+  color: var(--medium-grey);
 }
+
+

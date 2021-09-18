@@ -1,0 +1,14 @@
+.pac-target-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-top: 5px;
+  background-color: var(--white);
+}
+
+.pac-target-input:focus {
+  box-shadow: 0px 2px 0px 0px var(--color-primary);
+}

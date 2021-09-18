@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: black;
+  color: var(--color-type);
 }
 
 .header {
@@ -8,20 +8,20 @@ a {
   align-items: center;
   flex-shrink: 0;
   white-space: nowrap;
-  background-color: #fff;
+  background-color: var(--white);
   height: 60px;
   width: 100%;
-  font-size: 14px;
+  font-size: var(--font-size-header);
 }
 
 .menu a {
   text-decoration: none;
-  color: #2f2f33;
+  color: var(--color-type);
   font-weight: 500;
 }
 
 .menu a:hover {
-  color: #0162ff;
+  color: var(--color-primary);
 }
 
 .menu a:not(:first-child) {
@@ -29,7 +29,7 @@ a {
 }
 
 .menu a.active {
-  color: #0162ff;
+  color: var(--color-primary);
 }
 
 .logo {
@@ -37,7 +37,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   font-weight: 600;
-  font-size: 18px;
+  font-size: var(--font-size-logo);
   cursor: pointer;
   margin: 2.5rem;
 }

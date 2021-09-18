@@ -5,15 +5,15 @@ footer {
 
 a {
   text-decoration: none;
-  color: #0162ff;
+  color: var(--color-primary);
 }
 
 i {
-  color: #0162ff;
+  color: var(--color-primary);
 }
 
 a:hover,
 i:hover {
-  color: #1153bf;
+  color: var(--color-seconday);
   cursor: pointer;
 }
