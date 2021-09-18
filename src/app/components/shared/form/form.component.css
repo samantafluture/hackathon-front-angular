@@ -27,29 +27,6 @@ input {
   font-family: var(--font-primary);
 }
 
-input:focus, textarea:focus {
-  border: 1px solid var(--color-primary);
-}
-
-.field-group {
-  display: flex;
-}
-
-#date {
-  margin-left: 1rem;
-}
-
-.field-element {
-  display: flex;
-  width: 100%;
-}
-
-.field-element span {
-  position: absolute;
-  margin-top: 0.30rem;
-  padding: 1.5rem;
-}
-
 textarea {
   display: block;
   width: 100%;
@@ -68,7 +45,32 @@ textarea {
   resize: vertical;
 }
 
-#price, #location {
+input:focus,
+textarea:focus {
+  border: 1px solid var(--color-primary);
+}
+
+.field-group {
+  display: flex;
+}
+
+.field-element {
+  display: flex;
+  width: 100%;
+}
+
+.field-element span {
+  position: absolute;
+  margin-top: 0.3rem;
+  padding: 1.5rem;
+}
+
+#date {
+  margin-left: 1rem;
+}
+
+#price,
+#location {
   padding: 1.5rem 1.5rem 1.5rem 3rem;
 }
 
@@ -106,7 +108,8 @@ textarea {
   justify-content: flex-start;
 }
 
-.btn-submit, .btn-cancel {
+.btn-submit,
+.btn-cancel {
   width: 100%;
   padding: 1.5rem;
   line-height: 3rem;
@@ -129,21 +132,25 @@ textarea {
 .btn-submit {
   margin-left: 1.5rem;
   background-color: var(--color-primary);
- }
+}
 
- .btn-submit:hover {
+.btn-submit:hover {
   background-color: var(--color-seconday);
 }
 
- .btn-submit:disabled {
+.btn-submit:disabled {
   background-color: var(--medium-grey);
   cursor: default;
- }
+}
 
- .btn-cancel {
+.btn-cancel {
   background-color: var(--medium-grey);
- }
+}
 
- .btn-cancel:hover {
+.btn-cancel:hover {
   background-color: var(--dark-grey);
- }
+}
+
+i {
+  color: var(--medium-grey);
+}

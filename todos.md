@@ -12,15 +12,14 @@ DONE
 - [x] styles dos componentes e páginas
 - [x] favicon
 - [x] deploy vercel
+- [x] root styles no global
+- [x] separar/extrair mais componentes
 
 TODO
 
 # css, elementos
 
-- [ ] refatorar css:
-  - responsivo, mobile styles
-  - root styles no global
-  - separar/extrair mais componentes?
+- [ ] css responsivo, mobile styles
 - [ ] criar paginação:
       https://jasonwatmore.com/post/2019/06/18/angular-8-simple-pagination-example
 - [ ] adicionar mais hackathons

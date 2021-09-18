@@ -3,11 +3,11 @@ import { Hackathon } from 'src/app/interfaces/hackathon';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-hackathon-form',
-  templateUrl: './hackathon-form.component.html',
-  styleUrls: ['./hackathon-form.component.css'],
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css'],
 })
-export class HackathonFormComponent implements OnInit {
+export class FormComponent implements OnInit {
   @Input() btnName: string = '';
   @Input() hackathon!: Hackathon;
 

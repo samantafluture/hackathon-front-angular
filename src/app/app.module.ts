@@ -16,7 +16,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     ListHackathonComponent,
     AddHackathonComponent,
     EditHackathonComponent,
-    NotFoundComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

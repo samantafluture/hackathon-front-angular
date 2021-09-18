@@ -37,8 +37,10 @@ body {
   color: var(--color-type);
 }
 
-i {
-  color: var(--medium-grey);
+a {
+  text-decoration: none;
 }
 
-
+.emphasis {
+  color: var(--color-primary);
+}

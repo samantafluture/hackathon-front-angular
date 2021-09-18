@@ -1,0 +1,13 @@
+.card-btns {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  padding-right: 0.25rem;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom-right-radius: var(--border-radius-general);
+  border-bottom-left-radius: var(--border-radius-general);
+}
+
+
+
+

@@ -1,67 +1,60 @@
 <section>
   <form>
-    <div class="search">
-      <div class="search-bar">
-        <span><i class="fas fa-search"></i></span>
-        <input
-          class="search-input"
-          placeholder="Search for hackathons..."
-          [formControl]="searchInput"
-        />
-      </div>
-    </div>
-    <div class="filter">
-      <h3>Filter By:</h3>
-      <div class="filter-location">
-        <div class="filter-location-input">
-          <app-location-input #location></app-location-input>
-        </div>
+    <app-search-bar>
+      <input
+        class="search-input"
+        placeholder="Search for hackathons..."
+        [formControl]="searchInput"
+      />
+    </app-search-bar>
+    <app-filter>
+      <app-filter-location>
+        <app-location-input #location></app-location-input>
         <button
           class="filter-location-btn"
           (click)="filterLocation(location.userAddress)"
         >
           Around Here
         </button>
-      </div>
-      <div class="filter-btns">
-        <button (click)="filterFree()">All Free</button>
-        <button (click)="filterRemote()">All Remote</button>
-      </div>
-      <div class="clear-btn">
-        <button (click)="clear()">Clear Results</button>
-      </div>
-    </div>
+      </app-filter-location>
+      <app-filter-btns>
+        <button class="btn-free" (click)="filterFree()">All Free</button>
+        <button class="btn-remote" (click)="filterRemote()">All Remote</button>
+      </app-filter-btns>
+      <div><button class="btn-clear" (click)="clear()">Clear Results</button></div>
+    </app-filter>
   </form>
 
-  <section class="list-area">
-    <div *ngIf="hackathons$ | async as hackathons; else empty">
-      <h2 class="list-area-title">
-        Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons
-      </h2>
-      <div class="list-cards">
-        <div *ngFor="let hackathon of hackathons" class="card-item">
-          <a [href]="hackathon.url" class="card-header" target="_blank">
-            <h3 class="card-title">{{ hackathon.name }}</h3>
-            <p class="card-subtitle">{{ hackathon.description }}</p>
-            <a [href]="hackathon.url"><i class="fas fa-link fa-lg"></i></a>
-          </a>
-          <div class="card-details">
-            <p><i class="fas fa-map-marker-alt"></i>{{ hackathon.location }}</p>
-            <p><i class="fas fa-calendar"></i>{{ hackathon.date | date }}</p>
-            <p><i class="fas fa-dollar-sign"></i>{{ hackathon.price | number }}</p>
-          </div>
-          <div class="card-btns">
-            <a class="btn-edit" [routerLink]="['/edit/' + hackathon._id]"
-              ><i class="fas fa-pencil-alt fa-lg"></i
-            ></a>
-            <button class="btn-remove" (click)="remove(hackathon._id)">
-              <i class="fas fa-trash fa-lg"></i>
-            </button>
-          </div>
-        </div>
+  <div *ngIf="hackathons$ | async as hackathons; else empty">
+    <app-page-title>
+      Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons
+    </app-page-title>
+    <app-cards-list>
+      <div class="card-item" *ngFor="let hackathon of hackathons">
+        <app-card-header url="hackathon.url">
+          <h3 class="card-title">{{ hackathon.name }}</h3>
+          <p class="card-subtitle">{{ hackathon.description }}</p>
+          <a [href]="hackathon.url"><i class="fas fa-link fa-lg"></i></a>
+        </app-card-header>
+        <app-card-details>
+          <p><i class="fas fa-map-marker-alt"></i>{{ hackathon.location }}</p>
+          <p><i class="fas fa-calendar"></i>{{ hackathon.date | date }}</p>
+          <p>
+            <i class="fas fa-dollar-sign"></i>{{ hackathon.price | number }}
+          </p>
+        </app-card-details>
+        <app-card-btns>
+          <a class="btn-edit" [routerLink]="['/edit/' + hackathon._id]"
+            ><i class="fas fa-pencil-alt fa-lg"></i
+          ></a>
+          <button class="btn-remove" (click)="remove(hackathon._id)">
+            <i class="fas fa-trash fa-lg"></i>
+          </button>
+        </app-card-btns>
       </div>
-    </div>
-  </section>
+    </app-cards-list>
+  </div>
+
   <ng-template #empty>
     <app-loader></app-loader>
   </ng-template>
