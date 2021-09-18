@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LocationInputComponent } from './location-input/location-input.component';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { LoaderComponent } from './loader/loader.component';
+import { PageTitleComponent } from './page-title/page-title.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LoaderComponent } from './loader/loader.component';
     FooterComponent,
     LocationInputComponent,
     LoaderComponent,
+    PageTitleComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule, GooglePlaceModule],
   exports: [
@@ -24,7 +26,7 @@ import { LoaderComponent } from './loader/loader.component';
     FooterComponent,
     LocationInputComponent,
     LoaderComponent,
-
+    PageTitleComponent
   ],
 })
 export class SharedModule {}
