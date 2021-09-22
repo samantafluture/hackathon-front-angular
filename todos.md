@@ -15,11 +15,11 @@ DONE
 - [x] root styles no global
 - [x] separar/extrair mais componentes
 - [x] css responsivo, mobile styles
+- [x] criar paginação
 
 TODO
 
 # css, elementos
-- [ ] criar paginação
 - [ ] adicionar mais hackathons
 
 # deploy
