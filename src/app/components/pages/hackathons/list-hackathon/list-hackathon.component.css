@@ -150,4 +150,9 @@ i:hover {
   .filter-location-btn {
     line-height: 1.5rem;
   }
+
+  .card-item {
+    margin-bottom: 2rem;
+  }
 }
+
