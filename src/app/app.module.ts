@@ -9,6 +9,7 @@ import { AddHackathonComponent } from './components/pages/hackathons/add-hackath
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditHackathonComponent } from './components/pages/hackathons/edit-hackathon/edit-hackathon.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPaginationModule
   ],
   bootstrap: [AppComponent],
 })

@@ -14,19 +14,15 @@ DONE
 - [x] deploy vercel
 - [x] root styles no global
 - [x] separar/extrair mais componentes
+- [x] css responsivo, mobile styles
 
 TODO
 
 # css, elementos
-
-- [ ] css responsivo, mobile styles
-https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
-- [ ] criar paginação:
-      https://jasonwatmore.com/post/2019/06/18/angular-8-simple-pagination-example
+- [ ] criar paginação
 - [ ] adicionar mais hackathons
 
 # deploy
-
 - [ ] git hub bonitinho
 
 
@@ -34,4 +30,3 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
 
 
 
-  

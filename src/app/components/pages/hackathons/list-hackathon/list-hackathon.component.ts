@@ -21,6 +21,7 @@ const TYPING_DEBOUNCE_TIME = 300;
   styleUrls: ['./list-hackathon.component.css'],
 })
 export class ListHackathonComponent implements OnInit {
+  p: number = 1;
   hackathons: Hackathon[] = [];
   hackathonId!: string;
   location!: any;

@@ -21,7 +21,9 @@
         <button class="btn-free" (click)="filterFree()">All Free</button>
         <button class="btn-remote" (click)="filterRemote()">All Remote</button>
       </app-filter-btns>
-      <div><button class="btn-clear" (click)="clear()">Clear Results</button></div>
+      <div>
+        <button class="btn-clear" (click)="clear()">Clear Results</button>
+      </div>
     </app-filter>
   </form>
 
@@ -30,7 +32,13 @@
       Showing <span class="emphasis">{{ hackathons.length }}</span> Hackathons
     </app-page-title>
     <app-cards-list>
-      <div class="card-item" *ngFor="let hackathon of hackathons">
+      <div
+        class="card-item"
+        *ngFor="
+          let hackathon of hackathons
+            | paginate: { itemsPerPage: 4, currentPage: p }
+        "
+      >
         <app-card-header url="hackathon.url">
           <h3 class="card-title">{{ hackathon.name }}</h3>
           <p class="card-subtitle">{{ hackathon.description }}</p>
@@ -59,3 +67,8 @@
     <app-loader></app-loader>
   </ng-template>
 </section>
+
+<pagination-controls
+  (pageChange)="p = $event"
+  class="pagination"
+></pagination-controls>

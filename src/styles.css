@@ -44,3 +44,27 @@ a {
 .emphasis {
   color: var(--color-primary);
 }
+
+/* ngx pagination */
+
+ul.ngx-pagination {
+  padding-inline-start: 0 !important;
+  margin-block-start: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.ngx-pagination .current {
+  padding: 0.5rem 0.75rem !important;
+  background: var(--color-primary) !important;
+  color: var(--color-bg) !important;
+  cursor: pointer !important;
+  border-radius: var(--border-radius-general);
+  font-weight: bold;
+}
+
+.ngx-pagination .disabled {
+  padding: 0.5rem 0.75rem !important;
+  color: var(--medium-grey) !important;
+  cursor: default !important;
+}
