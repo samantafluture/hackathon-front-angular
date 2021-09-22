@@ -36,7 +36,7 @@
         class="card-item"
         *ngFor="
           let hackathon of hackathons
-            | paginate: { itemsPerPage: 4, currentPage: p }
+            | paginate: { itemsPerPage:  4, currentPage: p }
         "
       >
         <app-card-header url="hackathon.url">

@@ -56,11 +56,10 @@ ul.ngx-pagination {
 
 .ngx-pagination .current {
   padding: 0.5rem 0.75rem !important;
-  background: var(--color-primary) !important;
-  color: var(--color-bg) !important;
+  background: transparent !important;
+  color: var(--color-primary) !important;
   cursor: pointer !important;
   border-radius: var(--border-radius-general);
-  font-weight: bold;
 }
 
 .ngx-pagination .disabled {
