@@ -6,7 +6,7 @@ a {
 .header {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: space-between;
   white-space: nowrap;
   background-color: var(--white);
   height: 60px;
@@ -60,4 +60,11 @@ a {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .user-settings {
+    visibility: hidden;
+    opacity: 0;
+  }
 }

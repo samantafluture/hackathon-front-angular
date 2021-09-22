@@ -20,6 +20,7 @@ TODO
 # css, elementos
 
 - [ ] css responsivo, mobile styles
+https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
 - [ ] criar paginação:
       https://jasonwatmore.com/post/2019/06/18/angular-8-simple-pagination-example
 - [ ] adicionar mais hackathons
