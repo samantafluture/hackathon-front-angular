@@ -4,7 +4,9 @@ A basic and simple web app to search for hackathons around the world, built with
 
 It uses type ahead search and tries to make the minimum of requests to the server.
 
-Try it here: [Hackafy](https://hackathon-front-angular.vercel.app/)
+**Try it here: [Hackafy](https://hackathon-front-angular.vercel.app/)**
+
+![Hackafy-Home](https://github.com/samantafluture/hackathon-front-angular/blob/main/src/assets/Hackafy-Home.png?raw=true)
 
 This front-end uses the following backend: [Hackathon API](https://hackathon-api-nest-mongo.herokuapp.com/event/all). 
 
@@ -20,18 +22,31 @@ This front-end uses the following backend: [Hackathon API](https://hackathon-api
   - Does only one request if the value wasn't changed
   - Manipulates API results with `rxjs operators`
 
+![Hackafy-Search](https://github.com/samantafluture/hackathon-front-angular/blob/main/src/assets/Hackafy-Search.gif?raw=true)
+
 ### Search Filters
 
+- Filter results by:
+  - Location
+  - Autocomplete using Google Places API
+
+![Hackafy-Location](https://github.com/samantafluture/hackathon-front-angular/blob/main/src/assets/Hackafy-Location.gif?raw=true)
+
 - Filter results in real time by:
-  - Location (autocomplete using Google Places API)
   - Free events
   - Remote / online events
+
+![Hackafy-Filters](https://github.com/samantafluture/hackathon-front-angular/blob/main/src/assets/Hackafy-Filters.gif?raw=true)
 
 ### CRUD
 
 - Create, edit and delete hackathons
 - Form with validation and alert messages for required fields
 - Pagination for card results 
+
+![Hackafy-AddForm](https://github.com/samantafluture/hackathon-front-angular/blob/main/src/assets/Hackafy-AddForm.png?raw=true)
+
+![Hackafy-EditForm](https://github.com/samantafluture/hackathon-front-angular/blob/main/src/assets/Hackafy-EditForm.png?raw=true)
 
 ## Built with
 
@@ -41,16 +56,6 @@ This front-end uses the following backend: [Hackathon API](https://hackathon-api
 - Ngx Pagination
 
 Deploy: Vercel.
-
-## Screens
-
-![Hackafy-Home]()
-![Hackafy-AddForm]()
-![Hackafy-EditForm]()
-
-![Hackafy-Search]()
-![Hackafy-Location]()
-![Hackafy-Filters]()
 
 ## Under Construction
 
