@@ -1,28 +1,64 @@
-# HackathonFront
+# Hackafy (Front-End)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+A basic and simple web app to search for hackathons around the world, built with Angular.
 
-## Development server
+It uses type ahead search and tries to make the minimum of requests to the server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Try it here: [Hackafy](https://hackathon-front-angular.vercel.app/)
 
-## Code scaffolding
+This front-end uses the following backend: [Hackathon API](https://hackathon-api-nest-mongo.herokuapp.com/event/all). 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+### Search Bar 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Type ahead search field
+  - Filter through results by typing
+- User experience tied to performance
+  - Starts to search from 3 typed letters
+  - Uses debounce time 
+  - Does only one request if the value wasn't changed
+  - Manipulates API results with `rxjs operators`
 
-## Running unit tests
+### Search Filters
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Filter results in real time by:
+  - Location (autocomplete using Google Places API)
+  - Free events
+  - Remote / online events
 
-## Running end-to-end tests
+### CRUD
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Create, edit and delete hackathons
+- Form with validation and alert messages for required fields
+- Pagination for card results 
 
-## Further help
+## Built with
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# hackathon-front-angular
+- Angular
+- Angular CLI
+- Google Places API
+- Ngx Pagination
+
+Deploy: Vercel.
+
+## Screens
+
+![Hackafy-Home]()
+![Hackafy-AddForm]()
+![Hackafy-EditForm]()
+
+![Hackafy-Search]()
+![Hackafy-Location]()
+![Hackafy-Filters]()
+
+## Under Construction
+
+Features that are being implemented: 
+
+- [ ] Filter by date range (using date picker)
+- [ ] Google and Github login with Firebase
+- [ ] Support for uploading image file 
+- [ ] Possitiblity to create a list with favorit events
+
+Please feel free to contribute! This web app is still under development :coffee:
