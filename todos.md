@@ -16,11 +16,9 @@ DONE
 - [x] separar/extrair mais componentes
 - [x] css responsivo, mobile styles
 - [x] criar paginação
+- [x] adicionar mais hackathons
 
 TODO
-
-# css, elementos
-- [ ] adicionar mais hackathons
 
 # deploy
 - [ ] git hub bonitinho
