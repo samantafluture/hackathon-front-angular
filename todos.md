@@ -13,15 +13,23 @@ DONE
 - [x] favicon
 - [x] deploy vercel
 - [x] root styles no global
-- [x] separar/extrair mais componentes
-- [x] css responsivo, mobile styles
-- [x] criar paginação
-- [x] adicionar mais hackathons
+- [x] extract components
+- [x] css responsive, mobile styles
+- [x] create pagination
+- [x] add more hackathons to api
+- [x] update github readme.md file
 
 TODO
 
-# deploy
-- [ ] git hub bonitinho
+- [ ] filter by date range (using date picker)
+      https://material.angular.io/components/datepicker/overview
+      https://stackoverflow.com/questions/31977724/how-to-filter-json-data-by-date-range-in-javascript
+      https://medium.com/5bayt/using-datepicker-range-in-angular-ced2fd0389da
+      https://stackoverflow.com/questions/55371176/how-to-filter-list-by-dates-angular-6
+      https://www.freakyjolly.com/angular-material-date-time-range-selection-picker-tutorial/
+- [ ] google and github login with Firebase
+- [ ] support for uploading image file 
+- [ ] possitiblity to create a list with favorit events
 
 
 
